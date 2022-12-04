@@ -33,10 +33,6 @@ app.use('/api/products/', productRouter);
 app.use('/api/users/', userRouter);
 app.use('/api/bills/', billsRouter);
 
-// for deployment
-if(process.env.NODE_ENV === "production"){
-    app.use(express.static("client/build"))
-}
 
 //Create Port 
 const PORT = process.env.PORT || 5000;
